@@ -31,7 +31,7 @@ def teachable_machine_classification(img, weights_file):
     prediction = model.predict(data)
     return np.argmax(prediction) # return position of the highest probability
 
-uploaded_file = st.file_uploader("Choose an image ...", type=["png", "jpg","jpeg"])
+uploaded_file = st.file_uploader("Choose an image ...", type=["jpg","jpeg"])
 if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded MRI.', use_column_width=True)
