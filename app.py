@@ -5,8 +5,8 @@ import numpy as np
 
 
 st.title("Binary image Classification")
-st.header("Chakka Manga Classification")
-st.text("Upload an Image for image classification as chakka or manga")
+st.header("Jack Manga Classification")
+st.text("Upload an Image for image classification as Jackfruit or mango")
 
 def teachable_machine_classification(img, weights_file):
     # Load the model
@@ -39,6 +39,6 @@ if uploaded_file is not None:
         st.write("Classifying...")
         label = teachable_machine_classification(image, 'keras_model.h5')
         if label == 0:
-            st.write("Chakka")
+            st.markdown('This is more likely to be **_Mango_ **.')
         else:
-            st.write("Manga")
+            st.markdown('This is more likely to be **_Jackfruit_ **.')
