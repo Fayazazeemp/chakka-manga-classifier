@@ -5,7 +5,7 @@ import numpy as np
 
 
 st.title("Binary image Classification")
-st.header("Jack Manga Classification")
+st.header("Chakka Manga Classification")
 st.text("Upload an Image for image classification as Jackfruit or mango")
 
 def teachable_machine_classification(img, weights_file):
